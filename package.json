@@ -1,0 +1,10 @@
+{
+  "name": "nft-uniapp",
+  "license": "MIT",
+  "dependencies": {
+    "base-64": "^1.0.0",
+    "gsap": "^3.10.4",
+    "three": "^0.143.0",
+    "v-viewer": "^1.6.4"
+  }
+}

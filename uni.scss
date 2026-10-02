@@ -1,0 +1,66 @@
+/**
+ * 下方引入的为uView UI的集成样式文件，为scss预处理器，其中包含了一些"u-"开头的自定义变量
+ * uView自定义的css类名和scss变量，均以"u-"开头，不会造成冲突，请放心使用 
+ */
+@import 'uview-ui/theme.scss';
+
+
+/* 页面左右间距 */
+$page-row-spacing: 30rpx;
+// 默认背景色
+// $page-color-base: #09081A;
+$page-color-base: #1E1E1F;
+$page-color-light: #f8f6fc;
+$box-color-base: #2D2D2D;
+
+// $active-color: #00FECB;
+$btn-color: #6e4524;
+
+/* 文字尺寸 */
+$font-sm: 24rpx;
+$font-base: 28rpx;
+$font-lg: 32rpx;
+
+
+/* 边框颜色 */
+$border-color-dark: #DCDFE6;
+// $border-color-base: #c673fa;
+$border-color-base: #E4BD8E;
+$border-color-light: #f8f8f8;
+/* 图片加载中颜色 */
+$image-bg-color: #eee;
+/* 行为相关颜色 */
+$uni-color-primary:#3b7bf6;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+
+// 默认主题色
+// $base-color: #6896D9;
+$base-color: #E4BD8E;
+/*文字颜色*/
+$font-color-dark: #333333;
+$font-color-base: #3b7bf6;
+$font-color-light: #999999;
+$font-color-gray: #666666;
+$font-color-disabled: #C0C4CC;
+$font-color-red: #fc4a5b;
+$font-color-green: #5bc576;
+$font-color-bule: #3b7bf6;
+
+$btn-sm-purplered:linear-gradient(90deg, 
+		rgba(249, 98, 171, 1) 0%, 
+		rgba(254, 0, 121, 1) 100%), 
+	linear-gradient(
+		rgba(226, 86, 128, 1), 
+		rgba(226, 86, 128, 1));
+$btn-lg-purplered:linear-gradient(90deg, 
+		rgba(254, 114, 182, 1) 0%, 
+		rgba(254, 0, 121, 1) 100%), 
+	linear-gradient(
+		rgba(243, 28, 98, 1), 
+		rgba(243, 28, 98, 1));	
+// $btn-two-purplered:linear-gradient(135deg, rgba(141, 205, 242, 1) 0%, rgba(198, 115, 250, 1) 100%);
+// $btn-two-purplered:linear-gradient(90deg, rgba(210, 159, 127, 1) 0%, rgba(247, 222, 190, 1) 100%)
+$btn-two-purplered: #ECC79E;

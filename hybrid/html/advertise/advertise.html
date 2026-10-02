@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <meta name="viewport" content="viewport-fit=cover"> -->
+		<title>广告启动页</title>
+		<link rel="stylesheet" href="../css/advertise.css">
+		<!-- uni 的 SDK -->
+		<script type="text/javascript" src="../js/webView.js"></script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="con">
+				<img id="img" src="">
+			</div>
+			<div class="btn timer" id="timer">
+				<div id="info">跳过</div>
+				<div class="circleProgress_wrapper btn">
+					<div class="wrapper right">
+						<div class="circleProgress rightcircle"></div>
+					</div>
+					<div class="wrapper left">
+						<div class="circleProgress leftcircle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		let use = getQuery('use');
+		let url = getQuery('url');
+		let duration = getQuery('duration');
+		let skip = getQuery('skip');
+		// 待触发 `UniAppJSBridgeReady` 事件后，即可调用 uni 的 API。
+		document.addEventListener('UniAppJSBridgeReady', function() {
+			
+			// document.addEventListener("DOMContentLoaded", function() {
+				// document.getElementById("img").src = "../imgs/zdq.gif";
+				document.getElementById("img").src = url;
+				document.querySelector('.rightcircle').style.animationDuration = duration/1000 + 's';
+				document.querySelector('.leftcircle').style.animationDuration = duration/1000 + 's';
+				let timer = document.querySelector('.timer');
+				if(skip == 'false' || !skip){
+					timer.style.display = 'none';
+				} else {
+					timer.style.opacity = '1';
+				}
+			// }, false);
+			
+			document.querySelector('.btn').addEventListener('click', function(e) {
+				if (e.isTrusted) {
+					plus.webview.currentWebview().close();
+				}
+			});
+		});
+		
+		function getQuery(name) {
+		    // 正则：[找寻'&' + 'url参数名字' = '值' + '&']（'&'可以不存在）
+		    let reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		    let r = window.location.search.substr(1).match(reg);
+		    if(r != null) {
+		        // 对参数值进行解码
+		        return unescape(r[2]);
+		    }
+		    return null;
+		}
+	</script>
+</html>

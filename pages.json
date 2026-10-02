@@ -1,0 +1,835 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "链源",
+		"navigationBarBackgroundColor": "#1E1E1F",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#909399",
+		"selectedColor": "#303133",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/nft/index/index",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/member/center/index",
+				"text": "我的"
+			},
+			{
+				"pagePath": "pages/nft/market/index",
+				"text": "市场"
+			},
+			{
+				"pagePath": "pages/nft/collection/showRoom",
+				"text": "展厅"
+			}
+		]
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		//-------------------NFT--------------//
+		{
+			"path": "pages/nft/index/index",
+			"style": {
+				"navigationBarTitleText": "链源",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/public/index",
+			"style": {
+				"navigationBarTitleText": "链源"
+			}
+		},
+		{
+			"path": "pages/public/appdown",
+			"style": {
+				"navigationBarTitleText": "APP下载",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/nft/goods/info",
+			"style": {
+				"navigationBarTitleText": "藏品详情",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/blind_box/info",
+			"style": {
+				"navigationBarTitleText": "盲盒详情",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/featured/info",
+			"style": {
+				"navigationBarTitleText": "精选内容"
+			}
+		},
+		{
+			"path": "pages/nft/order/list",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/order/info",
+			"style": {
+				"navigationBarTitleText": "订单详情"
+			}
+		},
+		{
+			"path": "pages/nft/order/pay",
+			"style": {
+				"navigationBarTitleText": "订单支付"
+			}
+		},
+		{
+			"path": "pages/nft/collection/my",
+			"style": {
+				"navigationBarTitleText": "我的藏品"
+			}
+		},
+		{
+			"path": "pages/nft/collection/creator",
+			"style": {
+				"navigationBarTitleText": "创作者主页",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/collection/info",
+			"style": {
+				"navigationBarTitleText": "藏品信息",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/collection/log",
+			"style": {
+				"navigationBarTitleText": "藏品记录",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/blind_box/my",
+			"style": {
+				"navigationBarTitleText": "我的盲盒",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/mix/list",
+			"style": {
+				"navigationBarTitleText": "合成藏品",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/mix/info",
+			"style": {
+				"navigationBarTitleText": "合成",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/shareActivity/index",
+			"style": {
+				"navigationBarTitleText": "邀请活动",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/shareActivity/info",
+			"style": {
+				"navigationBarTitleText": "邀请活动详情"
+			}
+		},
+		{
+			"path": "pages/nft/market/index",
+			"style": {
+				"navigationBarTitleText": "市场",
+				"navigationBarBackgroundColor": "#2D2D2D",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/market/info",
+			"style": {
+				"navigationBarTitleText": "寄售详情",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/nft/collection/showRoom",
+			"style": {
+				"navigationBarTitleText": "展厅"
+			}
+		},{
+			"path": "pages/nft/creator/follow_list",
+			"style": {
+				"navigationBarTitleText": "关注创作者",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},{
+			"path": "pages/nft/creator/apply",
+			"style": {
+				"navigationBarTitleText": "申请创作者"
+			}
+		},
+		
+		//-------------------NFTend--------------//
+		//-------------------会员--------------//
+		{
+			"path": "pages/member/passport/login",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/member/passport/forget",
+			"style": {
+				"navigationBarTitleText": "找回密码"
+			}
+		},
+		{
+			"path": "pages/member/passport/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/member/center/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationStyle":"custom",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "44px"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/member/address/list",
+			"style": {
+				"navigationBarTitleText": "收货地址"
+			}
+		},
+		{
+			"path": "pages/member/address/manage",
+			"style": {
+				"navigationBarTitleText": "新增收货地址"
+			}
+		},
+		{
+			"path": "pages/member/center/set",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+			"path": "pages/member/center/editInfo",
+			"style": {
+				"navigationBarTitleText": "基本资料"
+			}
+		},
+		{
+			"path": "pages/member/center/editPassWord",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		},
+		{
+			"path": "pages/member/center/editPayPassWord",
+			"style": {
+				"navigationBarTitleText": "支付密码"
+			}
+		},
+		{
+			"path": "pages/member/center/bindMobile",
+			"style": {
+				"navigationBarTitleText": "绑定手机"
+			}
+		},
+		{
+			"path": "pages/member/center/checkIdCard",
+			"style": {
+				"navigationBarTitleText": "实名认证"
+			}
+		},
+		{
+			"path": "pages/member/center/editReceivePay",
+			"style": {
+				"navigationBarTitleText": "设置收款信息"
+			}
+		},
+	
+		{
+			"path": "pages/member/fans/index",
+			"style": {
+				"navigationBarTitleText": "邀请记录",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/member/fans/taIndex",
+			"style": {
+				"navigationBarTitleText": "TA的主页",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/member/wallet/index",
+			"style": {
+				"navigationBarTitleText": "我的钱包"
+			}
+		},
+		{
+			"path": "pages/member/wallet/myLog",
+			"style": {
+				"navigationBarTitleText": "明细"
+			}
+		},
+		{
+			"path": "pages/member/wallet/logInfo",
+			"style": {
+				"navigationBarTitleText": "收支明细"
+			}
+		},
+		{
+			"path": "pages/member/wallet/withdraw",
+			"style": {
+				"navigationBarTitleText": "提现申请"
+			}
+		},
+		{
+			"path": "pages/member/wallet/recharge",
+			"style": {
+				"navigationBarTitleText": "充值"
+			}
+		},
+		{
+			"path": "pages/member/wallet/dividendlog",
+			"style": {
+				"navigationBarTitleText": "我的帐本"
+			}
+		},
+		{
+			"path": "pages/member/center/collect",
+			"style": {
+				"navigationBarTitleText": "关注作品",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/member/center/follow",
+			"style": {
+				"navigationBarTitleText": "我的关注"
+			}
+		},
+		{
+			"path": "pages/member/center/bdAccount",
+			"style": {
+				"navigationBarTitleText": "BD账号"
+			}
+		},
+		{
+			"path": "pages/member/center/myCode",
+			"style": {
+				"navigationBarTitleText": "邀请好友"
+			}
+		},
+		{
+			"path": "pages/member/center/chainSearch",
+			"style": {
+				"navigationBarTitleText": "区块链信息查询"
+			}
+		},
+		{
+			"path": "pages/member/center/shareRanking",
+			"style": {
+				"navigationBarTitleText": "邀请排行榜",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		//-------------------会员end--------------//
+	
+		//-------------------公共--------------//
+		{
+			"path": "pages/public/message/index",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/public/message/notice",
+			"style": {
+				"navigationBarTitleText": "公告",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/public/article",
+			"style": {
+				"navigationBarTitleText": "文章"
+			}
+		},
+		{
+			"path": "pages/public/info",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/public/pay/payIng",
+			"style": {
+				"navigationBarTitleText": "正在支付"
+			}
+		},
+		{
+			"path": "pages/public/pay/paySuccess",
+			"style": {
+				"navigationBarTitleText": "支付提示"
+			}
+		},
+		{
+			"path": "pages/public/pay/waitPay",
+			"style": {
+				"navigationBarTitleText": "支付结果"
+			}
+		},
+		// avatarCropper-头像裁剪
+		{
+			"path": "uview-ui/components/u-avatar-cropper/u-avatar-cropper",
+			"style": {
+				"navigationBarTitleText": "头像裁剪",
+				"navigationBarBackgroundColor": "#000000"
+			}
+		},{
+            "path" : "pages/public/h5Top",
+            "style" : {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },{
+            "path" : "pages/nft/goods/previewModel",
+            "style" : {
+                "navigationBarTitleText": "模型预览",
+				"navigationStyle":"custom",
+                "enablePullDownRefresh": false
+            }
+        }
+		,{
+			"path": "uni_modules/uni-upgrade-center-app/pages/upgrade-popup",
+			"style": {
+				"app-plus": {
+					"animationDuration": 200,
+					"animationType": "fade-in",
+					"background": "transparent",
+					"backgroundColorTop": "transparent",
+					"popGesture": "none",
+					"scrollIndicator": false,
+					"titleNView": false
+				},
+				"disableScroll": true
+			}
+		}
+		,{
+            "path" : "pages/member/center/collection-details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "区块链藏品详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/public/webview",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/public/maintenance",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+				"navigationStyle":"custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/member/center/about",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "关于链源"
+            }
+            
+        }
+        ,{
+            "path" : "pages/member/center/exchangeActivity",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "兑换活动",
+				"enablePullDownRefresh": true,
+				"h5": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle",
+						"offset": "-44px",
+						"height": "120px"
+					}
+				},
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#00FECB",
+						"style": "circle"
+					}
+				}
+            }
+            
+        }
+    ]
+	
+}
